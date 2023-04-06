@@ -6,3 +6,4 @@ if (rename($filerename, $rand . '.txt')) {
 } else {
     echo 'Error Renaming.';
 }
+?>
