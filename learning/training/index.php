@@ -139,6 +139,7 @@ var_dump($result);
                 </div>
             </div>
             <!-- card 9 -->
+
             <div class="product-items">
                 <div class="image-contain">
                     <img src="assets/img/broccoli.jpg" class="image">
@@ -150,6 +151,17 @@ var_dump($result);
                 <p class="high-price">$5.99perkg</p>
                 <div class="buy1">
                     <button class="buy">Add for $1.98</button>
+                    <?php
+                    $product_items['brocolli,each-approx.330g,La maana Fresh,$1.98,$5.99perkg'];
+                    $uList .= "<ul>";
+                    foreach($product_items as $product_item) {
+                        $uList .= "<li>$product_item</li>";
+                    }
+                    $uList .= "</ul>";
+                    echo $uList;
+
+                    ?>
+
                     <tr>
                         <?php
                         while ($row = mysqli_fetch_assoc($result)) {
@@ -199,7 +211,7 @@ var_dump($result);
             }
 
             ?>
-            <form action="index.php" method="post">
+            <!-- <form action="index.php" method="post">
                 <label>Name:</label>
                 <input type="text" name="name" />
 
@@ -221,7 +233,7 @@ var_dump($result);
 
                 <br>
                 <input type="submit" name="submit" value="submit" />
-            </form>
+            </form> -->
         </section>
     </main>
 </body>
